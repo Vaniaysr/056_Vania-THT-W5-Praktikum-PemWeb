@@ -1,0 +1,106 @@
+body {
+    background-color: #0a0a0a;
+    color: #eee;
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#dashboard-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background: linear-gradient(to right, #001f2e, #0a0a0a);
+    border-bottom: 2px solid #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+#dashboard-header h1 {
+    color: #00ffff;
+    margin-bottom: 10px;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+/* === Tahap 2 === */
+#mission-control {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* === Tahap 3 === */
+.asset-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 2px solid #555;
+    background-color: #111;
+    color: #eee;
+    border-radius: 10px;
+    min-height: 220px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.asset-card h3 {
+    margin-top: 0;
+    color: #00ffff;
+}
+
+.asset-card p {
+    flex: 1;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.asset-status {
+    margin-top: auto; 
+    font-weight: bold;
+    color: #00ffff;
+}
+
+/* === Tahap 4 === */
+.asset-card::after {
+    content: "Buka Arsip Proyek";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 255, 0.25);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.asset-card:hover::after {
+    opacity: 1;
+}
+
+/* === Tahap 5 === */
+.asset-card {
+    border: 2px solid #555;
+}
+
+#priority-alpha {
+    border: 2px solid #00ffff;
+}
+
+#mission-control .asset-card:hover {
+    border: 2px solid #ff00ff;
+}
+
+.asset-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    cursor: pointer;
+}
